@@ -1,6 +1,6 @@
 # Tic Tac Toe for the Web ❌⭕
 
-[![codecov](https://codecov.io/github/AdeebAli/tic-tac-toe/graph/badge.svg?token=PRXTTTY2QD)](https://codecov.io/github/AdeebAli/tic-tac-toe) [![CI Pipeline](https://github.com/AdeebAli/tic-tac-toe/actions/workflows/nodejs.yml/badge.svg?branch=main)](https://github.com/AdeebAli/tic-tac-toe/actions/workflows/nodejs.yml)
+[![codecov](https://codecov.io/github/AdeebAli/tic-tac-toe/graph/badge.svg?token=PRXTTTY2QD)](https://codecov.io/github/AdeebAli/tic-tac-toe) ![CI Pipeline](https://github.com/AdeebAli/tic-tac-toe/actions/workflows/nodejs.yml/badge.svg?branch=main)
 
 **_The Classic Two Player Game, in the browser!_**
 
