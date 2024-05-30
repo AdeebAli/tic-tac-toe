@@ -1,3 +1,4 @@
+import { Board } from "../types/board";
 import { Piece } from "../types/piece";
 
 const allSolutions = [
@@ -47,7 +48,7 @@ export const translateBoardStateOnMove = ({
   board,
   currentPiece,
 }: {
-  board: (Piece | null)[][];
+  board: Board;
   currentPiece: Piece;
 }): number[][] => {
   return board.map((row) => {
@@ -80,7 +81,7 @@ export const checkIfGameDraw = ({
   currentBoard,
   currentPiece,
 }: {
-  currentBoard: (Piece | null)[][];
+  currentBoard: Board;
   currentPiece: Piece;
 }) => {
   const flattenedBoard = currentBoard.flat();
