@@ -6,11 +6,11 @@
 
 The frontend web application for playing tic tac toe on the browser.
 
-Made with React, Eslint, and Vite/Vitest.  
+Made with React, Eslint, and Vite/Vitest.
 
 ## Requirements
 
-* NodeJS 18+
+- NodeJS 18+
 
 ## Getting Started
 
@@ -40,7 +40,7 @@ To run the full test suite,
     npm test
 ```
 
-To Test with coverage, you can use 
+To Test with coverage, you can use
 
 ```bash
     npm test -- --coverage
@@ -52,7 +52,7 @@ This project uses the default recommended ruleset for eslint to enforce code sty
 
 To run the linter and check for code style errors,
 
-``` bash
+```bash
     npm run lint
 ```
 
@@ -62,9 +62,28 @@ Oh no! We have a bunch of linting errors. That's totally fixable! You just need 
     npm run lint:fix
 ```
 
+## Running with Docker
+
+This application can be run with Docker using the supplied Dockerfile to build the image.
+Your machine must have Docker installed in order to perform the following steps. Download instructions can be found on the [Official Docker Website](https://docs.docker.com/get-docker/)
+
+### Building the Image
+
+change directory to the root of the repository, then
+
+```bash
+docker build -t <username>/tic-tac-toe .
+```
+
+### Running the Image
+
+```bash
+docker run -p <public_port>:8080 -d <username>/tic-tac-toe
+```
+
 ## Made With ❤️ Using
 
-* React - Web Application Framework
-* Vite - Build tool
-* Vitest - Unit Testing Framework
-* Eslint - Code Style
+- React - Web Application Framework
+- Vite - Build tool
+- Vitest - Unit Testing Framework
+- Eslint & Prettier - Code Style and Formatting
