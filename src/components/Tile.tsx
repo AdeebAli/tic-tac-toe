@@ -17,9 +17,9 @@ export const Tile = ({
       <Center>
         {value ? (
           value === "X" ? (
-            <FaX color="red" size={90} />
+            <FaX data-testid="x-tile" color="red" size={90} />
           ) : (
-            <FaO color="blue" size={90} />
+            <FaO data-testid="o-tile" color="blue" size={90} />
           )
         ) : null}
       </Center>

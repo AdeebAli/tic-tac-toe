@@ -120,7 +120,11 @@ export const Board = ({
         <div className={css({ paddingRight: 3, fontSize: 20 })}>
           Current Turn:
         </div>
-        {xTurn ? <FaX size={20} color="red" /> : <FaO size={20} color="blue" />}
+        {xTurn ? (
+          <FaX data-testid="current-turn-x" size={20} color="red" />
+        ) : (
+          <FaO data-testid="current-turn-o" size={20} color="blue" />
+        )}
       </Flex>
       <button
         className={css({
