@@ -1,4 +1,4 @@
-import { Piece } from "../../types/piece";
+import { Board } from "../../types/board";
 import {
   checkIfGameDraw,
   checkIfGameWon,
@@ -7,7 +7,7 @@ import {
 
 describe("checkIfGameDraw", () => {
   it("should return true if all spots filled and game not won", () => {
-    const currentBoard: (Piece | null)[][] = [
+    const currentBoard: Board = [
       ["O", "O", "X"],
       ["X", "X", "O"],
       ["O", "X", "X"],
@@ -15,7 +15,7 @@ describe("checkIfGameDraw", () => {
     expect(checkIfGameDraw({ currentBoard, currentPiece: "O" })).toEqual(true);
   });
   it("should return false if there are empty spaces", () => {
-    const currentBoard: (Piece | null)[][] = [
+    const currentBoard: Board = [
       ["X", null, "O"],
       [null, null, null],
       [null, null, null],
@@ -23,7 +23,7 @@ describe("checkIfGameDraw", () => {
     expect(checkIfGameDraw({ currentBoard, currentPiece: "O" })).toEqual(false);
   });
   it("should return false if the game has been won", () => {
-    const board: (Piece | null)[][] = [
+    const board: Board = [
       ["O", "O", "X"],
       ["X", "O", "X"],
       ["X", "X", "O"],

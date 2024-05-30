@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Board } from "./Board";
-import { Piece } from "../types/piece";
+import { Board as BoardType } from "../types/board";
 
 export const Game = () => {
   const [xTurn, setXTurn] = useState<boolean>(true);
 
-  const [boardState, setBoardState] = useState<(Piece | null)[][]>(
+  const [boardState, setBoardState] = useState<BoardType>(
     Array(3).fill(Array(3).fill(null))
   );
 

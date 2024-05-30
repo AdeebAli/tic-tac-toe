@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from "react";
-import { Piece } from "../types/piece";
 import { Flex, Grid, GridItem } from "../../styled-system/jsx";
 import { Tile } from "./Tile";
 import { css } from "../../styled-system/css";
@@ -9,12 +8,13 @@ import {
   checkIfGameWon,
   translateBoardStateOnMove,
 } from "../util/util";
+import { Board as BoardType } from "../types/board";
 
 export const WinnerDisplay = ({
   board,
   xTurn,
 }: {
-  board: (Piece | null)[][];
+  board: BoardType;
   xTurn: boolean;
 }) => {
   const currentPiece = xTurn ? "O" : "X";
@@ -31,7 +31,7 @@ export const DrawDisplay = ({
   board,
   xTurn,
 }: {
-  board: (Piece | null)[][];
+  board: BoardType;
   xTurn: boolean;
 }) => {
   const currentPiece = xTurn ? "X" : "O";
@@ -55,8 +55,8 @@ export const Board = ({
 }: {
   xTurn: boolean;
   setXTurn: Dispatch<SetStateAction<boolean>>;
-  boardState: (Piece | null)[][];
-  setBoardState: Dispatch<SetStateAction<(Piece | null)[][]>>;
+  boardState: BoardType;
+  setBoardState: Dispatch<SetStateAction<BoardType>>;
 }) => {
   const handleClick = ({
     rowPosition,
