@@ -21,6 +21,6 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["vitest/globals"]
   },
-  "include": ["src", "./vitest.setup.ts"],
+  "include": ["src", "./vitest.setup.ts", "styled-system", "./panda.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
