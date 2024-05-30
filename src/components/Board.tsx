@@ -34,7 +34,7 @@ export const DrawDisplay = ({
   board: BoardType;
   xTurn: boolean;
 }) => {
-  const currentPiece = xTurn ? "X" : "O";
+  const currentPiece = xTurn ? "O" : "X";
   const gameIsDraw = checkIfGameDraw({
     currentBoard: board,
     currentPiece,
@@ -78,7 +78,6 @@ export const Board = ({
         }
       });
     });
-    console.log(newBoardState);
     setBoardState(newBoardState);
     setXTurn(!xTurn);
   };
