@@ -44,4 +44,27 @@ describe("Game", () => {
     expect(queryByTestId("current-turn-o")).toBeInTheDocument();
     expect(getByText("X Wins!")).toBeInTheDocument();
   });
+
+  it("should let you reset the game", async () => {
+    const { getAllByRole, queryByTestId } = render(<Game />);
+
+    /* eslint-disable @typescript-eslint/no-unused-vars */
+    const [
+      tile1,
+      _tile2,
+      _tile3,
+      _tile4,
+      _tile5,
+      _tile6,
+      _tile7,
+      _tile8,
+      _tile9,
+      reset,
+    ] = getAllByRole("button");
+
+    await userEvent.click(tile1); // x taking turn
+    expect(queryByTestId("x-tile")).toBeInTheDocument();
+    await userEvent.click(reset);
+    expect(queryByTestId("x-tile")).not.toBeInTheDocument();
+  });
 });
